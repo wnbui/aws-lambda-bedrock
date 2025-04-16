@@ -1,6 +1,10 @@
-# aws-lambda-bedrock
+# AWS Bedrock Model Serverless Application
 
 This project demonstrates how to build a serverless AWS application that integrates with AWS Bedrock using a Lambda function and API Gateway. The infrastructure is provisioned with Terraform and deployment is automated using GitHub Actions.
+
+
+## AWS Architecture
+
 
 ## Prerequisites
 - Terraform
@@ -8,7 +12,9 @@ This project demonstrates how to build a serverless AWS application that integra
 - GitHub respository with Actions enabled
 - Local Python virtual environment (recommended)
 
-## AWS Architecture
+## How to run the application
+
 
 
 ## Resources
+- [Amazon Bedrock endpoints](https://docs.aws.amazon.com/general/latest/gr/bedrock.html): use Bedrock runtime APIs
