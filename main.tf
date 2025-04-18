@@ -7,7 +7,6 @@ terraform {
   }
 }
 
-# Configure the AWS Provider
 provider "aws" {
   region = "us-east-1"
 }
@@ -131,4 +130,13 @@ resource "aws_lambda_permission" "apigw_permission" {
 resource "aws_api_gateway_deployment" "bedrock_model_deployment" {
   depends_on  = [aws_api_gateway_integration.lambda_integration]
   rest_api_id = aws_api_gateway_rest_api.bedrock_model_api.id
+  description = "Deployment for Bedrock Model API"
+}
+
+# Stage resource
+resource "aws_api_gateway_stage" "prod_stage" {
+  stage_name    = "prod"
+  rest_api_id   = aws_api_gateway_rest_api.bedrock_model_api.id
+  deployment_id = aws_api_gateway_deployment.bedrock_model_deployment.id
+  variables     = {}
 }
