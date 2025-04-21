@@ -15,16 +15,11 @@ This project demonstrates how to build a serverless AWS application that integra
 
 ## How to run the application
 
-Initial
-```zip lambda_function.zip lambda_function.py```
-
-```terraform init```
-
-```terraform validate```
-
-```terraform plan```
-
-```terraform apply```
+```zip lambda_function.zip lambda_function.py
+terraform init
+terraform validate
+terraform plan
+terraform apply```
 
 
 ## Configuration Requirements
