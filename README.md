@@ -35,6 +35,9 @@ From the AWS Bedrock Dashboard
 
 From Bedrock documentation or AWS console
 
+## Sample Output
+![Sample Output](sample_output.png)
+
 ## Resources
 - [Amazon Bedrock endpoints](https://docs.aws.amazon.com/general/latest/gr/bedrock.html) (use Bedrock runtime APIs)
 - [Inference request parameters and response fields for foundational models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html)
