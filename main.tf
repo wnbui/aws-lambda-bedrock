@@ -57,7 +57,7 @@ resource "aws_iam_policy" "bedrock_policy" {
 resource "aws_iam_policy_attachment" "bedrock_policy_attachment" {
   name       = "bedrock_policy_attachment"
   roles      = [aws_iam_role.lambda_exec_role.name]
-  policy_arn = aws_iam_policy.bedrock_policy
+  policy_arn = aws_iam_policy.bedrock_policy.arn
 }
 
 ### Lambda Function
@@ -65,7 +65,7 @@ resource "aws_lambda_function" "bedrock_model_lambda" {
   filename      = "lambda_function.zip"
   runtime       = "python3.12"
   function_name = "bedrock_model_function"
-  role          = aws_iam_role.lambda_exec_role
+  role          = aws_iam_role.lambda_exec_role.arn
   handler       = "lambda_function.handler"
 
   source_code_hash = filebase64sha256("lambda_function.zip")
@@ -74,7 +74,7 @@ resource "aws_lambda_function" "bedrock_model_lambda" {
   environment {
     variables = {
       # From the AWS Bedrock Dashboard
-      BEDROCK_MODEL_ID = "bedrock-model-id"
+      BEDROCK_MODEL_ID = "mistral.mistral-small-2402-v1:0"
       # From Bedrock documentation or AWS console
       BEDROCK_ENDPOINT = "https://bedrock-runtime.us-east-1.amazonaws.com"
     }
@@ -83,6 +83,13 @@ resource "aws_lambda_function" "bedrock_model_lambda" {
   memory_size = 256
   timeout     = 30
 }
+
+### Cloudwatch for monitoring and logs
+resource "aws_cloudwatch_log_group" "lambda_log_group" {
+  name              = "/aws/lambda/${aws_lambda_function.bedrock_model_lambda.function_name}"
+  retention_in_days = 7
+}
+
 
 ### API Gateway Configuration
 
