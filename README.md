@@ -27,11 +27,12 @@ terraform apply
 
 Examples:
 
-```# Model ID
+```
 BEDROCK_MODEL_ID="mistral.mistral-small-2402-v1:0"
-# Bedrock endpoints based on region
 BEDROCK_ENDPOINT="https://bedrock-runtime.us-east-1.amazonaws.com"
 ```
+- [Supported foundation models in Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html)
+- [Amazon Bedrock endpoints](https://docs.aws.amazon.com/general/latest/gr/bedrock.html) (use Bedrock runtime APIs)
 
 From Bedrock documentation or AWS console
 
