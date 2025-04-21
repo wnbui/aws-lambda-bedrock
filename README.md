@@ -27,11 +27,13 @@ terraform apply
 
 Examples:
 
-```BEDROCK_MODEL_ID = "mistral.mistral-small-2402-v1:0"```
+```BEDROCK_MODEL_ID = "mistral.mistral-small-2402-v1:0"
+```
 
 From the AWS Bedrock Dashboard
 
-```BEDROCK_ENDPOINT = "https://bedrock-runtime.us-east-1.amazonaws.com"```
+```BEDROCK_ENDPOINT = "https://bedrock-runtime.us-east-1.amazonaws.com"
+```
 
 From Bedrock documentation or AWS console
 
