@@ -19,7 +19,8 @@ This project demonstrates how to build a serverless AWS application that integra
 terraform init
 terraform validate
 terraform plan
-terraform apply```
+terraform apply
+```
 
 
 ## Configuration Requirements
