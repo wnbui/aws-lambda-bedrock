@@ -15,13 +15,14 @@ This project demonstrates how to build a serverless AWS application that integra
 
 ## How to run the application
 
-```zip lambda_function.zip lambda_function.py
+```
+chmod +x package_lambda.sh
+./package_lambda.sh
 terraform init
 terraform validate
 terraform plan
-terraform apply
+terraform apply -auto-approve
 ```
-
 
 ## Configuration Requirements
 
@@ -36,7 +37,7 @@ BEDROCK_ENDPOINT="https://bedrock-runtime.us-east-1.amazonaws.com"
 
 From Bedrock documentation or AWS console
 
-## Sample Output
+## Testing with Sample Input and Output Using Postman
 ![Sample Output](sample_output.png)
 
 ## Additional notes
