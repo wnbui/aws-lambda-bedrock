@@ -1,6 +1,8 @@
-# AWS Bedrock Model Serverless Application
+# AWS Bedrock Model Serverless Application with Terraform Deployment CI/CD
 
 This project demonstrates how to build a serverless AWS application that integrates with AWS Bedrock using a Lambda function and API Gateway. The infrastructure is provisioned with Terraform and deployment is automated using GitHub Actions. This application can be integrated into any other application to add AI functionality.
+
+An optional CI/CD pipleline is added for AWS deployment for Terraform. This can be triggered manually using GitHub Actions or customized to run jobs automatically. An additional GitHub Action to cleanup infrastructure to easily destroy provisioned AWS resources.
 
 
 ## AWS Architecture
