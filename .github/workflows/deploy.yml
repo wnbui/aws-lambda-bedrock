@@ -30,7 +30,8 @@ jobs:
 
       - name: Package lambda
         run: |
-          zip lambda_function.py lambda_function.py
+          rm -f lambda_function.zip
+          zip lambda_function.zip lambda_function.py
 
       - name: Upload Lambda artifact
         uses: actions/upload-artifact@v4.6.2
