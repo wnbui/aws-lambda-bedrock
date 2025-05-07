@@ -10,7 +10,6 @@ An optional CI/CD pipleline is added for AWS deployment for Terraform. This can 
 
 An additional manual GitHub Action to cleanup infrastructure to easily destroy provisioned AWS resources.
 
-
 ## AWS Architecture
 ![Architecture](architecture.png)
 
